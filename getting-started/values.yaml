@@ -1,7 +1,7 @@
 server:
   additionalApplications:
   - name: app-of-app
-    namespace: argocd
+    namespace: default
     project: default
     source:
       repoURL: https://github.com/burnoutband/declarative-argocd.git
@@ -9,7 +9,7 @@ server:
       path: getting-started/argocd
     destination:
       server: https://kubernetes.default.svc
-      namespace: argocd
+      namespace: default
     syncPolicy:
       syncOptions:
         - CreateNamespace=true
